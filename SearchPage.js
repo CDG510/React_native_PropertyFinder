@@ -86,15 +86,13 @@ class SearchPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            searchString: 'Vancouver',
+            searchString: 'London'
             isLoading: false,
             message: ''
         };
     }
     onSearchTextChanged(event){
-        console.log("onSearchTextChanged")
         this.setState({searchString: event.nativeEvent.text});
-        console.log(this.state.searchString);
     };
     _executeQuery(query) {
       console.log(query);
@@ -149,7 +147,7 @@ class SearchPage extends Component {
                         style={styles.searchInput}
                         value={this.state.searchString}
                         onChange={this.onSearchTextChanged.bind(this)}
-                        placeholder="Search via yur mums arse"/>
+                        placeholder="Search in UK"/>
                     <TouchableHighlight style={styles.button}
                         underlayColor={"#99d9f4"}
                         onPress={this.onSearchPressed.bind(this)}>
